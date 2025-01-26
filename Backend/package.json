@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "First Practice",
+  "main": "first.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/text-to-speech": "^5.8.0",
+    "@google/generative-ai": "^0.21.0",
+    "@runwayml/sdk": "^1.4.4",
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "craiyon": "^2.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ffmpeg": "^0.0.4",
+    "form-data": "^4.0.1",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.80.0",
+    "playht": "^0.14.0"
+  },
+  "keywords": []
+}
