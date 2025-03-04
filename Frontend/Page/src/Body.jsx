@@ -18,14 +18,17 @@ function Body() {
         </div>
         <nav className="nav">
           <a href="/home">Home</a>
+          <a href="/">My videos</a>
           <a href="/about">About</a>
           <a href="/help">Help</a>
+          
+
         </nav>
       </div>
       <main className="main">
         <div className="content">
           <h2>Bringing Timeless Tales to Life</h2>
-          <Link to="/generate"> {/* Navigate to "/generate" */}
+          <Link to="/generate">
             <button className="button" style={{ fontFamily: "'Rye', sans-serif" }}>
               Get Started
             </button>

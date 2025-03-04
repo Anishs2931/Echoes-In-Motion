@@ -3,6 +3,7 @@ body {
     padding: 0;
     background-size:cover;
     background-image:url("tales-image.png");
+    
   }
 
 header {
@@ -11,6 +12,11 @@ header {
     background-color: #FF6F61;
     color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vid{
+    align-items: center;
+    margin-left: 200px;
 }
 
 header h1 {

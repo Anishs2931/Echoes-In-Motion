@@ -31,7 +31,7 @@ function Generate() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/generate", {
+      const request = await fetch("http://localhost:5000/generate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,16 +39,20 @@ function Generate() {
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
+      const response = await fetch("http://localhost:5000/final-video")
 
-      if (result.success) {
+      if (response.ok) {
+        const blob = await response.blob();
+        const videoUrl = window.URL.createObjectURL(blob); 
+  
         setResponseMessage("Story generated successfully!");
-        setVideoUrl(result.videoUrl);
+        setVideoUrl(videoUrl); 
       } else {
-        setResponseMessage("Failed to generate the story.");
+        const errorData = await response.json();
+        setResponseMessage(errorData.message || "Failed to generate the story.");
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error during generation:", error);
       setResponseMessage("Error during generation.");
     }
   };
@@ -165,11 +169,24 @@ function Generate() {
 
         {videoUrl && (
           <div>
+            <div className='vid'>
             <h3>Generated Video:</h3>
-            <video width="600" controls>
+            <video width="700" controls>
               <source src={videoUrl} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+            </div>
+            <div className='ps-5 ms-5'>
+            <button className="button ms-5 " style={{ fontFamily: "'Rye', sans-serif" }}>
+              Save
+            </button>
+            <button className="button ms-5 " style={{ fontFamily: "'Rye', sans-serif" }}>
+              Download
+            </button>
+            <button className="button ms-5" style={{ fontFamily: "'Rye', sans-serif" }}>
+              Regenerate
+            </button>
+            </div>
           </div>
         )}
     </div>

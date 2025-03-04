@@ -44,14 +44,20 @@ app.post("/generate", async (req, res) => {
 });
 
 app.get("/final-video", (req, res) => {
-  const finalVideoPath = path.resolve("final_video.mp4");
+  console.log("Before")
+  const videoUrl = path.resolve("final_video.mp4");
+  console.log("After")
+  console.log("Requested video path:", videoUrl);
 
-  if (fs.existsSync(finalVideoPath)) {
-    res.sendFile(finalVideoPath);
+  if (fs.existsSync(videoUrl)) {
+    res.sendFile(videoUrl);
   } else {
+    console.log("Video not found at:", videoUrl);
     res.status(404).json({ success: false, message: "Final video not found" });
   }
 });
+
+
 
 
 app.listen(PORT, () => {

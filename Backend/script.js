@@ -38,7 +38,6 @@ async function generateContent() {
         } genre, making sure to include cultural nuances and local art styles of ${
             region || "any region"
         } in ${language || "English"}. Split the narration into various scenes, giving a one-line space for each scene. Don't add labels to scenes. 
-
         Character Details: ${characterDetails || "No character details provided"}
         Setting: ${setting || "No setting provided"}
         Story Length: ${storyLength || "Medium"} (e.g., short, medium, long).3-4 scenes for short,5-6 for medium and 9-10 for long.
