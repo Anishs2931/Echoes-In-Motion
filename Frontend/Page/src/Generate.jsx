@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom'; 
 import { Link } from 'react-router-dom';
 import './Generate.css'
+import logo from './logo.png'
 function Generate() {
   const [language, setLanguage] = useState('English');
   const [story, setStory] = useState('');
@@ -58,6 +59,26 @@ function Generate() {
   };
 
   return (
+    <div className="generate">
+      {/* Navbar */}
+      <div className="header">
+        <div className="logo">
+          <img
+            src={logo}
+            alt="Echoes in Motion Logo"
+            width="70px"
+            style={{ padding: '10px' }}
+          />
+          <p className="title">Echoes in Motion</p>
+        </div>
+        <nav className="nav">
+          <a href="/body">Home</a>
+          <a href="/">My videos</a>
+          <a href="/about">About</a>
+          <a href="/help">Help</a>
+        </nav>
+      </div>
+
     <div className="container">
       <div className="language-select">
         <label htmlFor="language">Select Language:</label>
@@ -88,7 +109,7 @@ function Generate() {
       <form onSubmit={handleSubmit}>
 
         <div className="form-group advanced-options">
-          <h1>Advanced Options</h1>
+          <h1 className='h'>Advanced Options</h1>
 
           <label htmlFor="character-details">Character Details (Optional):</label>
           <textarea
@@ -154,16 +175,16 @@ function Generate() {
             onChange={(e) => setAudience(e.target.value)}
           />
         </div>
-
-        <button type="submit">Generate Story</button>
-      </form>
-
-   
-      <Link to="/">
+        <button className='button me-5' type="submit">Generate Story</button>
+        <Link to="/">
             <button className="button" style={{ fontFamily: "'Rye', sans-serif" }}>
               Go Back
             </button>
       </Link>
+      </form>
+
+   
+      
 
       {responseMessage && <p>{responseMessage}</p>}
 
@@ -189,6 +210,8 @@ function Generate() {
             </div>
           </div>
         )}
+    </div>
+
     </div>
   );
 }
