@@ -90,12 +90,9 @@ Technology Stack
 
 AI Tools and APIs
 
-
-
-OpenAI GPT-4:
+Gemini API:
 
 Extracts characters, settings, and events from the story text.
-
 
 
 Stable Diffusion:
@@ -103,36 +100,9 @@ Stable Diffusion:
 Generates culturally accurate images for characters and scenes.
 
 
-
-Runway ML Gen-2:
-
-Converts text into short video animations.
-
-
-
-D-ID:
-
-Animates character images with synchronized voice and lip movements.
-
-
-
-ElevenLabs:
-
-Generates realistic regional voiceovers.
-
-
-
 Google Cloud Text-to-Speech:
 
 Creates narrations in various languages and accents.
-
-
-
-AIVA or Boomy:
-
-Composes background music tailored to the story's theme.
-
-
 
 FFmpeg:
 
@@ -143,22 +113,13 @@ Combines visuals, animations, and audio into a cohesive video.
 
 Backend and Orchestration
 
-
-
 Python: Coordinates the entire pipeline.
-
-Flask/FastAPI: Provides a user-friendly interface for input and output.
 
 
 Frontend
 
 
-
 React.js: Creates an interactive web interface for users.
-
-Three.js: Implements a drag-and-drop character and scene editor.
-
-
 
 How It Works
 
@@ -166,15 +127,11 @@ How It Works
 
 Input Story: The user enters a story in their preferred language.
 
-Story Analysis: GPT-4 extracts characters, plot, and emotional tone.
+Story Analysis: Gemini extracts characters, plot, and emotional tone.
 
 Visual Generation: Stable Diffusion creates images based on regional art styles.
 
-Animation: Runway ML or D-ID animates scenes and characters.
-
-Voiceover: ElevenLabs or Google TTS produces region-specific narrations.
-
-Music: AIVA generates background music to match the story's mood.
+Voiceover: Google TTS produces region-specific narrations.
 
 Compilation: FFmpeg combines animations, audio, and music into a video.
 
