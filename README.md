@@ -2,7 +2,7 @@ Echos in motion
 
 Folk Story to Animated Film.
 
-We have developed a fully functioning webapp that contains an AI tool that can convert text stories into animated shortfilms.A detailed description of the project is given below.A demo for our project output id here with our website is also given as final-video.mp4.Do check it out.
+We have developed a fully functioning webapp that contains an AI tool that can convert text stories into animated shortfilms.A detailed description of the project is given below.A demo for our project output is here with our website is also given as final-video.mp4.Do check it out.
 
 
 Project Overview
